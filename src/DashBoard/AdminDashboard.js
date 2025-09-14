@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LayOut from "../components/LayOut/LayOut";
 import axios from "axios";
+import { FaRupeeSign } from "react-icons/fa";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -218,7 +219,10 @@ const AdminDashboard = () => {
                                 height={50}
                               />
                             </td>
-                            <td>{p.price}</td>
+                            <td>
+                              <FaRupeeSign />
+                              {p.price}
+                            </td>
                             <td>
                               <button
                                 className="btn btn-outline-danger m-2"
@@ -294,14 +298,38 @@ const AdminDashboard = () => {
                                               setProductCategory(e.target.value)
                                             }
                                           >
-                                            <option value="Hot Beverages">
-                                              Hot Beverages
+                                            <option selected>
+                                              Select Category
                                             </option>
-                                            <option value="Cold Beverages">
-                                              Cold Beverages
+                                            <option value="Beverages">
+                                              Beverages
                                             </option>
-                                            <option value="Match Day Meal">
-                                              Match Day Meal
+                                            <option value="Health & Personal Care">
+                                              Health & Personal Care
+                                            </option>
+                                            <option value="Books & Stationery">
+                                              Books & Stationery
+                                            </option>
+                                            <option value="Fashion & Clothing">
+                                              Fashion & Clothing
+                                            </option>
+                                            <option value="Sports & Fitness">
+                                              Sports & Fitness
+                                            </option>
+                                            <option value="Electronics & Accessories">
+                                              Electronics & Accessories
+                                            </option>
+                                            <option value="Home & Kitchen Appliances">
+                                              Home & Kitchen Appliances
+                                            </option>
+                                            <option value="Beauty & Cosmetics">
+                                              Beauty & Cosmetics
+                                            </option>
+                                            <option value="Toys, Kids & Baby Products">
+                                              Toys, Kids & Baby Products
+                                            </option>
+                                            <option value="Groceries & Essentials">
+                                              Groceries & Essentials
                                             </option>
                                           </select>
                                         </div>
