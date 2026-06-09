@@ -445,7 +445,7 @@ const UserBillsPage = () => {
       getSingleUserBill();
       getUserData();
     }
-  }, [userId]);
+  }, [userId, getSingleUserBill, getUserData]);
 
   /* Fetch single bill when orderId changes */
   useEffect(() => {
